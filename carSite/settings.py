@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*$_ld=+zx8__o&&+1_r-%2kfl0-yadfu#g7*%^rq$oz(b(-elp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOST = ['*']
 
 
 # Application definition
@@ -145,12 +145,5 @@ MEDIA_ROOT = BASE_DIR / 'uploads'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-
-STATIC_URL = 'static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
-]
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')   
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
